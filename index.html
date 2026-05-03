@@ -6,31 +6,34 @@
   <title>Portfolio - Shahnawaz Hosan Chowdhury</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="shortcut icon" href="images/ICON.jpeg" type="image/x-icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
-  <!-- Aside Navbar -->
-  <aside class="fixed left-0 top-0 h-full w-64 bg-gray-800 shadow-lg p-6">
-    <div class="text-center mb-6">
-      <h1 class="text-xl font-bold">Shahnawaz Hosan Chowdhury</h1>
-    </div>
-    <nav>
-      <ul class="space-y-4">
-        <li><a href="#home" class="hover:text-green-400">Home</a></li>
-        <li><a href="#about" class="hover:text-green-400">About</a></li>
-        <li><a href="#skills" class="hover:text-green-400">Skills</a></li>
-        <li><a href="#education" class="hover:text-green-400">Education</a></li>
-        <li><a href="#portfolio" class="hover:text-green-400">Portfolio</a></li>
-        <li><a href="#contact" class="hover:text-green-400">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="mt-10 text-gray-400 text-sm">
-      © <script>document.write(new Date().getFullYear());</script> Shahnawaz Chowdhury <br> All rights reserved
-    </div>
-  </aside>
+  <!-- Mobile Topbar -->
+  <div class="md:hidden fixed top-0 left-0 w-full bg-gray-800 p-4 flex justify-between items-center z-50">
+    <h2 class="text-lg font-bold">Shahnawaz</h2>
+    <button id="menu-btn" class="text-white text-2xl">☰</button>
+  </div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" 
+       class="fixed top-0 left-0 h-screen w-64 bg-gray-800 p-6 flex flex-col transform -translate-x-full transition-transform duration-300 md:translate-x-0">
+  <h2 class="text-xl font-bold mb-6">Shahnawaz Hosan Chowdhury</h2>
+  
+  <!-- Vertical Nav -->
+  <nav class="flex flex-col space-y-4">
+    <a href="#home" class="hover:text-green-400">Home</a>
+    <a href="#about" class="hover:text-green-400">About</a>
+    <a href="#skills" class="hover:text-green-400">Skills</a>
+    <a href="#education" class="hover:text-green-400">Education</a>
+    <a href="#portfolio" class="hover:text-green-400">Portfolio</a>
+    <a href="#contact" class="hover:text-green-400">Contact</a>
+  </nav>
+
+  <p class="mt-auto text-xs text-gray-400">© 2026 Shahnawaz Chowdhury<br>All rights reserved</p>
+</aside>
 
   <!-- Main Content -->
   <main class="ml-64">
@@ -207,9 +210,9 @@
           <div>
             <h5 class="text-lg">CSS</h5>
             <div class="w-full bg-gray-700 rounded h-4">
-              <div class="bg-green-500 h-4 rounded" style="width:75%"></div>
+              <div class="bg-green-500 h-4 rounded" style="width:15%"></div>
             </div>
-            <p>65%</p>
+            <p>15%</p>
           </div>
           <div>
             <h5 class="text-lg">Python & Libraries</h5>
@@ -414,14 +417,36 @@
 </section>
     </main>
     
-    <!-- iTyped Plugin -->
-    <script src="https://cdn.jsdelivr.net/npm/ityped@0.0.10"></script>
-    <script>
-        ityped.init(document.querySelector(".iTypedPlugin"), {
-        strings: ["Cybersecurity Enthusiast", "AI Agent Researcher", "Aspiring Security Engineer"],
+   <!-- iTyped Plugin -->
+<script src="https://cdn.jsdelivr.net/npm/ityped@0.0.10"></script>
+<script>
+  // Typing Effect
+  document.addEventListener("DOMContentLoaded", () => {
+    const typedElement = document.querySelector(".iTypedPlugin");
+    if (typedElement) {
+      ityped.init(typedElement, {
+        strings: [
+          "Cybersecurity Enthusiast",
+          "AI Agent Researcher",
+          "Aspiring Security Engineer"
+        ],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true
-        });
-    </script>
+      });
+    }
+
+    // Mobile Sidebar Toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+
+    if (menuBtn && sidebar) {
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("-translate-x-full");
+      });
+    }
+  });
+</script>
+
+
     
