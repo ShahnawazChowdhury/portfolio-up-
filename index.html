@@ -37,24 +37,22 @@
 
   <!-- Main Content -->
   <main class="ml-64">
- <body class="bg-gray-900 text-white"
 
-  <!-- Home Section -->
-  <section id="home" class="h-screen flex items-center justify-center bg-gray-900 text-white">
-    <div class="text-center">
-      <!-- Profile Image -->
-      <img src="images/c.jpeg" alt="profile" 
-           class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-green-400 shadow-lg">
 
-      <!-- Intro Text -->
-      <p class="text-lg">Hello, I'm</p>
-      <h1 class="text-4xl font-bold mt-2">Shahnawaz Hosan Chowdhury</h1>
-      <span class="iTypedPlugin text-green-400 text-xl mt-2 block"></span>
-    </div>
-  </section>
-    <!-- Social Links -->
-<!-- Social Links -->
-<div class="flex justify-center flex-wrap gap-4 mt-6">
+ <section id="home" class="h-screen flex items-center justify-center bg-gray-900 text-white">
+  <div class="text-center">
+
+    <!-- Profile Image -->
+    <img src="images/c.jpeg" alt="profile" 
+         class="w-40 h-40 md:w-56 md:h-56 rounded-full mx-auto mb-4 border-4 border-green-400 shadow-lg">
+
+    <!-- Intro Text -->
+    <p class="text-lg mb-1">Hello, I'm</p>
+    <h1 class="text-4xl font-bold">Shahnawaz Hosan Chowdhury</h1>
+    <span class="iTypedPlugin text-green-400 text-xl mt-2 block"></span>
+
+  <!-- Social Icons (moved up, closer to text) -->
+  <div class="flex flex-wrap justify-center gap-4 text-green-400 text-2xl mb-6">
   <!-- Email -->
   <a href="mailto:chowdhuryshahnawaz3@gmail.com" target="_blank"
      class="group relative w-12 h-12 flex items-center justify-center rounded-full bg-green-500 
@@ -175,26 +173,28 @@
 </section>
 
     <!-- Personal Details -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-      <p><strong>Birthday:</strong> 13th April</p>
-      <p><strong>Age:</strong> 22</p>
-      <p><strong>Present Address:</strong> Raozan, Chattogram</p>
-      <p><strong>Permanent Address:</strong> Raozan, Chattogram</p>
-      <p><strong>Country:</strong> Bangladesh</p>
-      <p><strong>City:</strong> Chattogram</p>
-      <p><strong>Email:</strong> chowdhuryshahnawaz3@gmail.com</p>
-      <p><strong>Phone:</strong> +880 1762528016</p>
-    </div>
-    <div class="flex gap-4 mt-6">
-  <a href="CV/CV-Shahnawaz Hosan Chowdhury.pdf" download 
-     class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
-     Download CV
-  </a>
-  <a href="#contact" 
-     class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
-     Hire Me
-  </a>
-</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-300 mt-6">
+        <p><span class="font-semibold text-green-400">Birthday:</span> 13th April</p>
+        <p><span class="font-semibold text-green-400">Age:</span> 22</p>
+        <p><span class="font-semibold text-green-400">Present Address:</span> Raozan, Chattogram</p>
+        <p><span class="font-semibold text-green-400">Permanent Address:</span> Raozan, Chattogram</p>
+        <p><span class="font-semibold text-green-400">Country:</span> Bangladesh</p>
+        <p><span class="font-semibold text-green-400">City:</span> Chattogram</p>
+        <p><span class="font-semibold text-green-400">Email:</span> chowdhuryshahnawaz3@gmail.com</p>
+        <p><span class="font-semibold text-green-400">Phone:</span> +880 1762528016</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-4 mt-6">
+        <a href="cv/Shahnawaz_CV.pdf" 
+           class="bg-green-400 text-gray-900 font-semibold px-6 py-2 rounded-lg shadow hover:bg-green-500 transition">
+           Download CV
+        </a>
+        <a href="#contact" 
+           class="bg-transparent border border-green-400 text-green-400 font-semibold px-6 py-2 rounded-lg hover:bg-green-400 hover:text-gray-900 transition">
+           Hire Me
+        </a>
+      </div>
     <!-- Skills Section -->
     <section id="skills" class="py-20">
       <div class="container mx-auto text-center">
